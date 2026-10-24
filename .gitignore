@@ -3,3 +3,4 @@
 certbot/
 # Each site is its own git repo, cloned here on the VPS
 www/
+MIGRATION.md
