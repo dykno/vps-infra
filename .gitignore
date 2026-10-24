@@ -1,0 +1,5 @@
+.DS_Store
+# Let's Encrypt account, keys and certificates (lives only on the VPS)
+certbot/
+# Each site is its own git repo, cloned here on the VPS
+www/
