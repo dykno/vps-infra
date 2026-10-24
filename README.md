@@ -55,7 +55,7 @@ docker compose exec certbot certbot renew --dry-run
 2. Add `nginx/conf.d/newsite.com.conf` with **only** the port 80 server block (the ACME challenge location plus the HTTPS redirect). Reload nginx.
 3. Issue the certificate:
    ```bash
-   docker compose run --rm certbot certonly --webroot -w /var/www/certbot -d newsite.com -d www.newsite.com
+   docker compose exec certbot certbot certonly --webroot -w /var/www/certbot -d newsite.com -d www.newsite.com
    ```
 4. Add the 443 server block (copy `withani.net.conf`), commit, pull on the VPS, and reload nginx.
 
