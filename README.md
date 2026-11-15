@@ -48,7 +48,11 @@ docker compose exec certbot certbot certificates
 docker compose exec certbot certbot renew --dry-run
 ```
 
-**Logs:** `docker compose logs -f nginx` (rotated at 10 MB, 3 files kept).
+**Logs:** `docker compose logs -f nginx` (rotated at 10 MB, 3 files kept). Each access line starts with the requested host, so to see one site:
+
+```bash
+docker compose logs --no-log-prefix nginx | grep -E '^(www\.)?rastahorn\.com '
+```
 
 ## Adding a site
 1. Create the site repo with its public files in `www/`, then clone it into `~/sites/www/newsite.com`.
