@@ -6,7 +6,7 @@ x-logging: &logging
 
 services:
   nginx:
-    image: nginx:1.28-alpine
+    image: nginx:stable-alpine
     restart: unless-stopped
     ports:
       - "80:80"

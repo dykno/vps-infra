@@ -35,6 +35,8 @@ docker compose up -d
 
 **Update a site's content:** `git pull` inside `www/<site>`. Live immediately.
 
+**Update images:** `./update.sh`. nginx tracks `stable-alpine`, so this picks up nginx, OpenSSL and Alpine fixes. It only restarts if the new nginx accepts the config.
+
 **Change nginx config:** `git pull` here, then:
 
 ```bash
