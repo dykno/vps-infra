@@ -21,7 +21,7 @@ services:
     logging: *logging
 
   certbot:
-    image: certbot/certbot:v4.1.1
+    image: certbot/certbot:v5.10.0
     restart: unless-stopped
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done'"
     volumes:
